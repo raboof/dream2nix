@@ -65,7 +65,7 @@
   nodejs = config.deps.nodejs;
 
   nodeSources = config.deps.runCommandLocal "node-sources" {} ''
-    tar --no-same-owner --no-same-permissions -xf ${nodejs.src}
+    tar --no-same-owner --no-same-permissions -xf ${nodejs-slim.src}
     mv node-* $out
   '';
 
